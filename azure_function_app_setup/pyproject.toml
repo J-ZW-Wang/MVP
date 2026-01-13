@@ -1,0 +1,9 @@
+[project]
+name = "azure-function-app-setup"
+version = "0.1.0"
+description = "This is a sample project for setting up the Azure function app"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "azure-functions>=1.24.0",
+]
