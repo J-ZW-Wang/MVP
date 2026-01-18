@@ -6,7 +6,7 @@ import logging
 
 
 app = func.FunctionApp()  # Container for all functions in this file
-
+# For implmenting fastapi within azure functions use: app = func.AsgiFunctionApp(app=your_fastapi_app_instance)
 
 # def count_chars(inputstr: str = "Hello") -> str:
 #     # Count the number of characters in the input string
