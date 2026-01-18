@@ -13,8 +13,10 @@ app = func.FunctionApp()  # Container for all functions in this file
 #     return f"The input string '{inputstr}' has {len(inputstr)} characters."
 
 
-@app.function_name(name="HttpTriggerFunction")
-@app.route(route="char_count")  # This is the endpoint after DomainURL/api/
+@app.function_name(name="HttpTriggerFunction")  # Name of the function
+@app.route(
+    route="char_count", auth_level=func.AuthLevel.ANONYMOUS
+)  # This is the endpoint after DomainURL/api/
 def hello_world(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Python HTTP trigger function processed a request.")
 
