@@ -10,8 +10,8 @@ import asyncio
 
 
 def get_chat_agent():
-    load_dotenv("./Microsoft_Agent_Framework/.env")
-    openai_api_key = os.getenv("openai_api_key")
+    load_dotenv()
+    openai_api_key = os.getenv("OEPNAI_API_KEY")
 
     agent = OpenAIChatClient(
         api_key=openai_api_key, model_id="gpt-5.2-2025-12-11"
